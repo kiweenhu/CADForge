@@ -1,0 +1,33 @@
+# CK-CADForge —— CAD 轻量化转换服务
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# ---- 转换产物 ----
+# 每个任务一个 <jobId>/ 子目录（model.glb / structure.json / thumbnail.png）。
+# 这是运行输出，不是源码 —— 但它是调试轻量化结果最直接的证据，
+# 所以只在仓库里忽略，不删磁盘上的文件。
+_out/
+
+# ---- 日志 ----
+# 服务与子进程的输出（含 OCCT 崩溃前留下的 stdout/stderr 尾巴），
+# 排查段错误全靠它们，但绝不该进版本库。
+*.log
+
+# ---- 工具 ----
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.vscode/
+.idea/
+.DS_Store

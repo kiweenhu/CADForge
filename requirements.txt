@@ -1,0 +1,23 @@
+# CK-CADForge —— CAD 轻量化转换服务
+#
+# 运行形态：独立进程 + HTTP，绝不嵌入 CK-PLM 主工程。
+# 原因见 README「为什么必须独立」。
+
+fastapi>=0.110
+uvicorn[standard]>=0.27
+httpx>=0.26          # 转换完成后回调 CK-PLM
+numpy>=1.24          # mock 管线生成演示几何时用
+
+# ---------------------------------------------------------------------------
+# 真实转换内核：pythonocc-core（LGPL-3.0）
+#
+# 【不能用 pip 装】它依赖 OCCT 原生库，官方只提供 conda 包：
+#
+#     conda create -n cadforge python=3.10
+#     conda activate cadforge
+#     conda install -c conda-forge pythonocc-core=7.7.2   # 已实测跑通
+#
+# 未安装时服务会自动降级到 mock 管线（产出程序生成的演示装配体），
+# 端到端链路照样跑得通 —— 先把 viewer 与编排调顺，再装内核不迟。
+# ---------------------------------------------------------------------------
+# pythonocc-core==8.0.1.2
