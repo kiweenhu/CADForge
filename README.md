@@ -4,8 +4,8 @@ CAD 轻量化转换服务：把 STEP 数模转成浏览器可直接渲染的轻�
 
 它是 CK-PLM 的生态项目，但**必须独立部署**——不是架构洁癖，是许可证边界。
 
-> 完整的部署清单（Docker / 裸机 / 与 CK-PLM 对接 / 验收步骤 / 故障排查）见 CK-PLM 仓库的
-> [`docs/CK-CADForge-安装指南.md`](../CK-PLM/docs/CK-CADForge-安装指南.md)；
+> 完整的部署清单（Docker / 裸机 / 与 CK-PLM 对接 / 验收步骤 / 故障排查）见
+> [CK-CADForge 安装指南](http://ckai-tech.group/docs/ck-cadforge-install.html)；
 > 本文只写这个仓库自身的运行与开发要点。
 
 ---
